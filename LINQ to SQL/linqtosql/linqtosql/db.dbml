@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="emyo" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=emyo;Integrated Security=True" SettingsObjectName="linqtosql.Properties.Settings" SettingsPropertyName="emyoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Kisiler" Member="Kisilers">
+    <Type Name="Kisiler">
+      <Column Name="kisiId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="soyad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dogum_tarihi" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="il" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ilce" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.iller" Member="illers">
+    <Type Name="iller">
+      <Column Name="ilId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="il_adi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="iller_ilceler" Member="ilcelers" ThisKey="ilId" OtherKey="ilId" Type="ilceler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ilceler" Member="ilcelers">
+    <Type Name="ilceler">
+      <Column Name="ilceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ilce_adi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ilId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="iller_ilceler" Member="iller" ThisKey="ilId" OtherKey="ilId" Type="iller" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.isimler" Member="isimlers">
+    <Type Name="isimler">
+      <Column Name="ogrenci_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="isim" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="isimler_iliskiler" Member="iliskilers" ThisKey="ogrenci_id" OtherKey="ogrenci_id" Type="iliskiler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dersler" Member="derslers">
+    <Type Name="dersler">
+      <Column Name="ders_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ders_adi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="dersler_iliskiler" Member="iliskilers" ThisKey="ders_id" OtherKey="ders_id" Type="iliskiler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.iliskiler" Member="iliskilers">
+    <Type Name="iliskiler">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ogrenci_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ders_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="dersler_iliskiler" Member="dersler" ThisKey="ders_id" OtherKey="ders_id" Type="dersler" IsForeignKey="true" />
+      <Association Name="isimler_iliskiler" Member="isimler" ThisKey="ogrenci_id" OtherKey="ogrenci_id" Type="isimler" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

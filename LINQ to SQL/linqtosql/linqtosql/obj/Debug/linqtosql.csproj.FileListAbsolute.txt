@@ -1,0 +1,10 @@
+C:\Users\proje-bap\Desktop\EMYO\EBP201 Programlama II\Uygulamalar\linqtosql\linqtosql\bin\Debug\linqtosql.exe.config
+C:\Users\proje-bap\Desktop\EMYO\EBP201 Programlama II\Uygulamalar\linqtosql\linqtosql\bin\Debug\linqtosql.exe
+C:\Users\proje-bap\Desktop\EMYO\EBP201 Programlama II\Uygulamalar\linqtosql\linqtosql\bin\Debug\linqtosql.pdb
+C:\Users\proje-bap\Desktop\EMYO\EBP201 Programlama II\Uygulamalar\linqtosql\linqtosql\obj\Debug\linqtosql.csproj.AssemblyReference.cache
+C:\Users\proje-bap\Desktop\EMYO\EBP201 Programlama II\Uygulamalar\linqtosql\linqtosql\obj\Debug\linqtosql.Form1.resources
+C:\Users\proje-bap\Desktop\EMYO\EBP201 Programlama II\Uygulamalar\linqtosql\linqtosql\obj\Debug\linqtosql.Properties.Resources.resources
+C:\Users\proje-bap\Desktop\EMYO\EBP201 Programlama II\Uygulamalar\linqtosql\linqtosql\obj\Debug\linqtosql.csproj.GenerateResource.cache
+C:\Users\proje-bap\Desktop\EMYO\EBP201 Programlama II\Uygulamalar\linqtosql\linqtosql\obj\Debug\linqtosql.csproj.CoreCompileInputs.cache
+C:\Users\proje-bap\Desktop\EMYO\EBP201 Programlama II\Uygulamalar\linqtosql\linqtosql\obj\Debug\linqtosql.exe
+C:\Users\proje-bap\Desktop\EMYO\EBP201 Programlama II\Uygulamalar\linqtosql\linqtosql\obj\Debug\linqtosql.pdb
